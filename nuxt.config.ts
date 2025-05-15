@@ -7,7 +7,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: [`${process.env.FLY_MACHINE_ID}.rockoai.dev`],
+    },
   },
-
   modules: ["@nuxt/content"],
 });
